@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Radley&display=swap" rel="stylesheet">
+</head>
+<body class="pagina-login">
+    <header>
+        <div class="logo">
+            <a href="../index.html"><img src="../images/icon.png" alt="icon" class="icon"></a>
+        </div>
+        <nav>
+            <ul class="nav-bar">
+                <li class="nav-element element-inicio"><a href="../index.html">Inicio</a></li>
+                <li class="nav-element"><a href="tienda.html">Tienda</a></li>
+                <li class="nav-element"><a href="nosotros.html">Nosotros</a></li>
+                <li class="nav-element"><a href="soporte.html">Soporte</a></li>
+                <li class="nav-element"><a href="login.html"><img src="../images/icon-log-in.png" alt="log-in" class="icon-log-in"></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="inicio-registro-cuenta">
+        <div class="inicio-sesion">
+            <h2>Inicio de sesion</h2>
+            <form action="iniciar-sesion" method="post" class="form-inicio-sesion">
+                <label for="user" class="inicio-element">User:</label>
+                <input type="text" id="user" name="user-user" placeholder="Juan">
+                <label for="mail" class="inicio-element">E-mail:</label>
+                <input type="mail" id="mail" name="user-mail" placeholder="juanperez@gmail.com"required>
+                <label for="password" class="inicio-element">Contraseña:</label>
+                <input type="password" id="password" name="user-password" placeholder="********"required>
+                <div class="div-boton-inicio-sesion">
+                    <button type="submit" class="boton-inicio-sesion">Iniciar sesion</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="registrar-cuenta">
+            <h2>Registrar cuenta</h2>
+            <form action="registrar-cuenta" method="post" class="form-registro-cuenta">
+                <label for="registro-user" class="inicio-element">User:</label>
+                <input type="text" id="registro-user" name="registro-user" placeholder="Juan">
+                <label for="registro-mail" class="inicio-element">E-mail:</label>
+                <input type="mail" id="registro-mail" name="registro-mail" placeholder="juanperez@gmail.com"required>
+                <label for="registro-password" class="inicio-element">Contraseña:</label>
+                <input type="password" id="registro-password" name="registro-password" placeholder="********"required>
+                <div class="div-boton-registro-cuenta">
+                    <button type="submit" class="boton-registro-cuenta">Registrar cuenta</button>
+                </div>
+            </form>
+        </div>
+        
+
+    </main>
+    <footer class="pie-pagina">
+        <div class="info-pie-pagina">
+            Copyright © 2022
+        </div>
+        <div>
+            <div class="telefono-pie-pagina">
+                <img src="../images/whatsapp_icono.png">
+                <h4 class="centrar">11-0000-0000</h4>
+            </div>
+            <h4 class="centrar"><a href="#">Terminos y Condiciones</a></h4>
+        </div>
+    </footer>
+    
+</body>
+</html>

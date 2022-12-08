@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Radley&display=swap" rel="stylesheet">
+</head>
+<body class="pagina-tienda">
+    
+    <header>
+        <div class="logo">
+            <a href="../index.html"><img src="../images/icon.png" alt="icon" class="icon"></a>
+        </div>
+        <nav>
+            <ul class="nav-bar">
+                <li class="nav-element element-inicio"><a href="../index.html">Inicio</a></li>
+                <li class="nav-element"><a href="tienda.html">Tienda</a></li>
+                <li class="nav-element"><a href="nosotros.html">Nosotros</a></li>
+                <li class="nav-element"><a href="soporte.html">Soporte</a></li>
+                <li class="nav-element"><a href="login.html"><img src="../images/icon-log-in.png" alt="log-in" class="icon-log-in"></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="servicios">
+            <h1>Nuestros productos</h1>
+            <div class="container-servicios">
+                <div class="servicio">
+                    <img src="../images/dorada.jpg" alt="" class="imagen-servicio">
+                    <h3>Rubia</h3>
+                    <p>Dorada y equlibrada</p>
+                </div>
+                <div class="servicio">
+                    <img src="../images/roja.jpg" alt="" class="imagen-servicio">
+                    <h3>Roja</h3>
+                    <p>Roja y acaramelada</p>
+                </div>
+                <div class="servicio">
+                    <img src="../images/stoutt.png" alt="" class="imagen-servicio">
+                    <h3>Negra</h3>
+                    <p>Dulce y de espuma cremosa</p>
+                </div>
+                <div class="servicio">
+                    <img src="../images/ipa.jpg" alt="" class="imagen-servicio">
+                    <h3>IPA</h3>
+                    <p>Con aroma a frutas cítricas</p>
+                </div>
+                <div class="servicio">
+                    <img src="../images/apa.jpg" alt="" class="imagen-servicio">
+                    <h3>APA</h3>
+                    <p>Espuma blanquecina, de buena retención</p>
+                </div>
+                <div class="servicio">
+                    <img src="../images/lager.jpg" alt="" class="imagen-servicio">
+                    <h3>Lager</h3>
+                    <p>Espuma blanca de buena retención</p>
+                </div>
+            </div>
+            <div class="contratar-servicio">
+                <h2>¡Contrata nuestro servicio!</h2>
+                <fieldset>
+                    <form class="formu" action="compra">
+                        <div class="nombre elem-form">
+                            <label for="nombre">Nombre y Apellido / Nombre empresa: </label>
+                            <br>
+                            <input type="text" id="nombre" name="nombre" required>
+                            <br>
+                        </div>
+                        
+                        <div class="seleccionar-servicios elem-form">
+                            <p>Cervezas (seleccione 1 o más): </p>
+                            <input type="checkbox" id="rubia" name="rubiacheck" value="1">
+                            <label for="rubia">Rubia</label><br>
+                            <input type="checkbox" id="roja" name="rojacheck" value="2">
+                            <label for="roja">Roja</label><br>
+                            <input type="checkbox" id="negra" name="negracheck" value="3">
+                            <label for="negra">Negra</label><br>
+                            <input type="checkbox" id="ipa" name="ipacheck" value="4">
+                            <label for="ipa">IPA</label><br>
+                            <input type="checkbox" id="apa" name="apacheck" value="5">
+                            <label for="apa">APA</label><br>
+                            <input type="checkbox" id="lager" name="lagercheck" value="5">
+                            <label for="lager">Lager</label><br>
+                        </div>
+                        
+                        <div class="telefono elem-form">
+                            <label for="telefono">Tel: </label>
+                            <br>
+                            <input type="tel" id="telefono" name="telefono" required>
+                            <br>
+                        </div>
+                        
+                        <div class="boton elem-form">
+                            <div class="center">
+                                <button type="submit">Enviar</button>
+                            </div>
+                            
+                        </div>
+                    </form>
+                </fieldset>
+            </div>
+        </div>
+        
+    </main>
+    <footer class="pie-pagina">
+        <div class="info-pie-pagina">
+            Copyright © 2022
+        </div>
+        <div>
+            <div class="telefono-pie-pagina">
+                <img src="../images/whatsapp_icono.png">
+                <h4 class="centrar">11-0000-0000</h4>
+            </div>
+            <h4 class="centrar"><a href="#">Terminos y Condiciones</a></h4>
+        </div>
+    </footer>
+</body>
+</html>

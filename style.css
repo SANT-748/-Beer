@@ -1,0 +1,391 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Nav Bar */
+header {
+    background-color: #da9f20f3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: fit-content;
+}
+
+header ul li {
+    list-style: none;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: #1F0C04;
+    list-style: none;
+}
+
+.logo {
+    margin-left: 1%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+nav {
+    margin-right: 1%;
+    width:auto;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: flex-end;
+    align-items:center;
+    gap: 10%;
+    margin-right: 10%;
+    font-family: 'Raleway', sans-serif;
+    font-size: 125%;
+}
+
+.icon-log-in {
+    width: 40px;
+    height: auto;
+}
+
+.icon {
+    height: 50px;
+    width: auto;
+}
+
+.logo{
+    margin: 1.5%;
+}
+
+/* Footer */
+.pie-pagina {
+    background-color: #1F0C04;
+    color:azure;
+    padding: 30px 20px;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Radley', serif;
+    margin: 0;
+    margin-top: auto;
+}
+
+.pie-pagina div a {
+    color: azure;
+    margin: 6px;
+    font-family: 'Radley', serif;
+    text-decoration: none;
+}
+.pie-pagina div a:visited{
+    color: azure;
+    text-decoration: none;
+}
+
+.info-pie-pagina {
+    align-self: center;
+}
+
+.centrar {
+    margin: 2px;
+    align-items: center;
+} 
+
+.telefono-pie-pagina {
+    display: flex;
+    justify-content: center;
+}
+
+/* Pagina Index */
+.pagina-principal {
+    background-color: #1F0C04;
+}
+
+.imagen-principal {
+    height: auto;
+    width: 100%;
+    opacity: 0.93;
+}
+
+.texto-portada {
+    color: rgb(206, 143, 25);
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    text-align: end;
+}
+
+.titulo-portada {
+    font-size: 125px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.pi {
+    font-size:187px;
+    font-family: sans-serif, sans-serif;
+}
+
+main {
+    margin: 0;
+}
+
+/* Pagina Servicios */
+.servicios {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20%;
+    margin-left: 20%;
+}
+
+.imagen-servicio {
+    height: auto;
+    width: 200px;
+    border-radius: 10px;
+}
+
+.container-servicios {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    align-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.pagina-tienda{
+    background-image: url("./images/fondo.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+}
+
+.servicio{
+    background-color: #9a7e6b;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+}
+.servicio h3{
+    color:#d19719;
+    text-shadow: 1px 1px 2px #000000;
+    font-family: 'Radley', serif;
+}
+.servicio p{
+    text-shadow: 1px 1px 2px #ffffff;
+    font-family: 'Radley', serif;
+}
+
+.servicios h1{
+    color: #da9f20f3;
+    font-family: 'Radley', serif;
+}
+
+.contratar-servicio h2 {
+    color: #da9f20f3;
+    font-family: 'Radley', serif;
+}
+
+.contratar-servicio {
+    background-color: #9a7e6b;
+    border-radius: 10px;
+    padding: 10px;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 20px;
+}
+.contratar-servicio h2{
+    text-shadow: 1px 1px 2px #000;
+    text-align: center;
+}
+.formu{
+    color: #000;
+    text-shadow: 1px 1px 2px #8B0000;
+    text-align: center;
+}
+.elem-form {
+    padding: 10px;
+    font-family: 'Radley', serif;
+}
+
+.elem-form button{
+    font-family: 'Radley', serif;
+}
+
+div.center{
+    text-align: center;
+}
+
+/* Pagina Nosotros */
+.pagina-nosotros {
+    background-image: url("./images/fondo.png");
+}
+
+.main-nosotros {
+    margin: 2% 0%;
+}
+
+.aboutUs,.nosotros-comienzo,.nosotros-productos {
+    display: flex;
+    margin: 3%;
+    justify-content: center;
+}
+
+.nosotros-imagen-1 {
+    border-radius:100%;
+}
+
+.nosotros-imagen-2 {
+    border-radius: 10px;
+}
+
+.nosotros-comienzo {
+    padding-right: 10px;
+}
+
+.main-nosotros h1 {
+    text-align: center;
+    font-size: 65px;
+    color: aliceblue;
+}
+
+.nosotros-comienzo-texto,.nosotros-productos-texto {
+    border: 2px solid rgb(231, 133, 21);
+    padding: 5px;
+    border-radius: 10px;
+    margin: 5px;
+    height: fit-content;
+    width: 350px;
+    color: aliceblue;
+}
+
+.main-nosotros h3 {
+    font-size: 30px;
+}
+
+.main-nosotros p {
+    font-size: 20px;
+}
+
+/* Pagina Soporte */
+.pagina-soporte {
+    background-image: url("./images/fondo.png");
+}
+
+.pagina-soporte fieldset {
+    margin-top:2%;
+}
+
+.form-soporte {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    grid-template-rows:4;
+}
+
+.pagina-soporte legend{
+    font-size:20px;
+    color:white;
+}
+
+.form-soporte input {
+    width:80%;
+}
+
+.form-soporte div {
+    margin:5px 0px;
+    text-align:center;
+}
+
+/* ---Pagina Soporte (grid)--- */
+.form-soporte .div-nombre {
+    grid-column:1/2;
+    grid-row:1;
+}
+
+.form-soporte .div-apellido {
+    grid-column:2/3;
+    grid-row:1;
+}
+
+.form-soporte .div-email {
+    grid-column:1/2;
+    grid-row:2;
+}
+
+.form-soporte .div-numero-telefonico {
+    grid-column:2/3;
+    grid-row:2;
+}
+
+.form-soporte .div-mensaje {
+    grid-column:1/3;
+    grid-row:3;
+}
+.form-soporte .div-mensaje input {
+    width:90%;
+}
+
+.form-soporte .div-enviar {
+    grid-column:1/3;
+    grid-row:4;
+}
+/* ------ */
+
+.form-soporte .div-enviar button {
+    width:7%;
+}
+
+.titulo-input {
+    font-size:15px;
+    color:white;
+}
+
+/* Login */
+.pagina-login {
+    background-image: url("./images/fondo.png");
+}
+
+.inicio-sesion, .registrar-cuenta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 3px solid #da9f20f3;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: rgb(229, 226, 226);
+}
+
+.form-inicio-sesion,.form-registro-cuenta {
+    display: flex;
+    flex-direction: column;
+}
+
+.inicio-element {
+    margin-top: 10px;
+}
+
+.boton-inicio-sesion, .boton-registro-cuenta {
+    margin-top: 10px;
+    width: fit-content;
+}
+
+.div-boton-inicio-sesion, .div-boton-registro-cuenta{
+    text-align: center;
+}
+
+.inicio-registro-cuenta {
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    justify-content: center;
+    margin-top: 30px;
+}
