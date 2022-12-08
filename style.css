@@ -25,7 +25,7 @@ header ul li {
 
 header ul li a {
     text-decoration: none;
-    color: #1F0C04;
+    color: #600000;
     list-style: none;
 }
 
@@ -62,7 +62,7 @@ nav {
 }
 
 .logo{
-    margin: 1.5%;
+    margin: 0.5%;
 }
 
 /* Footer */
@@ -167,6 +167,7 @@ main {
     background-size: cover;
     width: 100%;
     height: auto;
+    font-family: 'Radley', serif;
 }
 
 .servicio{
@@ -178,21 +179,17 @@ main {
 .servicio h3{
     color:#d19719;
     text-shadow: 1px 1px 2px #000000;
-    font-family: 'Radley', serif;
 }
 .servicio p{
-    text-shadow: 1px 1px 2px #ffffff;
-    font-family: 'Radley', serif;
+    text-shadow: 1px 1px 2px #fff;
 }
 
 .servicios h1{
     color: #da9f20f3;
-    font-family: 'Radley', serif;
 }
 
 .contratar-servicio h2 {
     color: #da9f20f3;
-    font-family: 'Radley', serif;
 }
 
 .contratar-servicio {
@@ -214,7 +211,6 @@ main {
 }
 .elem-form {
     padding: 10px;
-    font-family: 'Radley', serif;
 }
 
 .elem-form button{
@@ -228,11 +224,14 @@ div.center{
 /* Pagina Nosotros */
 .pagina-nosotros {
     background-image: url("./images/fondo.png");
+    background-size: cover;
 }
 
 .main-nosotros {
     margin: 2% 0%;
+    font-family: 'Radley', serif;
 }
+
 
 .aboutUs,.nosotros-comienzo,.nosotros-productos {
     display: flex;
@@ -255,7 +254,8 @@ div.center{
 .main-nosotros h1 {
     text-align: center;
     font-size: 65px;
-    color: aliceblue;
+    color: #d19719;
+    text-shadow: 1px 1px 2px #000000;
 }
 
 .nosotros-comienzo-texto,.nosotros-productos-texto {
@@ -276,19 +276,27 @@ div.center{
     font-size: 20px;
 }
 
+
 /* Pagina Soporte */
+.pagina-soporte main {
+    display: flex;
+    justify-content: center;
+    font-family: 'Radley', serif;
+}
+
+.form-soporte-fieldset {
+    margin: auto 25%;
+}
+
 .pagina-soporte {
     background-image: url("./images/fondo.png");
+    background-size: cover;
 }
 
 .pagina-soporte fieldset {
     margin-top:2%;
-}
-
-.form-soporte {
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    grid-template-rows:4;
+    width: fit-content;
+    padding: 20px;
 }
 
 .pagina-soporte legend{
@@ -296,52 +304,21 @@ div.center{
     color:white;
 }
 
-.form-soporte input {
-    width:80%;
+.pagina-soporte label {
+    width: 400px;
+}
+
+.form-soporte {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 .form-soporte div {
+    display: flex;
+    justify-content: center;
     margin:5px 0px;
-    text-align:center;
-}
-
-/* ---Pagina Soporte (grid)--- */
-.form-soporte .div-nombre {
-    grid-column:1/2;
-    grid-row:1;
-}
-
-.form-soporte .div-apellido {
-    grid-column:2/3;
-    grid-row:1;
-}
-
-.form-soporte .div-email {
-    grid-column:1/2;
-    grid-row:2;
-}
-
-.form-soporte .div-numero-telefonico {
-    grid-column:2/3;
-    grid-row:2;
-}
-
-.form-soporte .div-mensaje {
-    grid-column:1/3;
-    grid-row:3;
-}
-.form-soporte .div-mensaje input {
-    width:90%;
-}
-
-.form-soporte .div-enviar {
-    grid-column:1/3;
-    grid-row:4;
-}
-/* ------ */
-
-.form-soporte .div-enviar button {
-    width:7%;
+    width: fit-content;
 }
 
 .titulo-input {
@@ -349,9 +326,17 @@ div.center{
     color:white;
 }
 
-/* Login */
-.pagina-login {
+.pagina-soporte input, .pagina-soporte textarea {
+    width: 100%;
+}
+.div-enviar button{
+    font-family: 'Radley', serif;
+}
+
+/* Pagina Login */
+.a-login {
     background-image: url("./images/fondo.png");
+    background-size: cover;
 }
 
 .inicio-sesion, .registrar-cuenta {
@@ -361,9 +346,17 @@ div.center{
     border: 3px solid #da9f20f3;
     padding: 20px;
     border-radius: 20px;
-    background-color: rgb(229, 226, 226);
+    background-color: #9a7e6b;
+    font-family: 'Radley', serif;
 }
-
+.inicio-sesion label, .registrar-cuenta label{
+    color: #000;
+    text-shadow: 1px 1px 2px #8B0000;
+}
+.inicio-sesion h2, .registrar-cuenta h2{
+    color: #d19719;
+    text-shadow: 1px 1px 2px #000;
+}
 .form-inicio-sesion,.form-registro-cuenta {
     display: flex;
     flex-direction: column;
@@ -388,4 +381,19 @@ div.center{
     gap: 100px;
     justify-content: center;
     margin-top: 30px;
+}
+.mensaje-input{
+    max-width: 100%;
+    max-height: 200px;
+    min-width: 100%;
+    min-height: 100px;
+}
+
+.pagina-login{
+    background-image: url("./images/fondo.png");
+    background-size: cover;
+}
+
+.div-boton-inicio-sesion button, .div-boton-registro-cuenta button{
+    font-family: 'Radley', serif;
 }
