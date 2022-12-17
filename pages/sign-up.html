@@ -24,23 +24,21 @@
             </ul>
         </nav>
     </header>
-    <main class="inicio-cuenta">
-        <div class="div-inicio-sesion">
-            <h2>Inicio de Sesion</h2>
-            <form action="iniciar-sesion" method="post" class="form-inicio-sesion">
-                <label for="user" class="inicio-element">User:</label>
-                <input type="text" id="user" name="user-user" placeholder="Juan">
-                <label for="mail" class="inicio-element">E-mail:</label>
-                <input type="mail" id="mail" name="user-mail" placeholder="juanperez@gmail.com"required>
-                <label for="password" class="inicio-element">Contraseña:</label>
-                <input type="password" id="password" name="user-password" placeholder="********"required>
+    <main class="registro-cuenta">
+        <div class="div-registro-cuenta">
+            <h2>Registrar Cuenta</h2>
+            <form action="registrar-cuenta" method="post" class="form-registro-cuenta">
+                <label for="registro-user" class="inicio-element">User:</label>
+                <input type="text" id="registro-user" name="registro-user" placeholder="Juan">
+                <label for="registro-mail" class="inicio-element">E-mail:</label>
+                <input type="mail" id="registro-mail" name="registro-mail" placeholder="juanperez@gmail.com"required>
+                <label for="registro-password" class="inicio-element">Contraseña:</label>
+                <input type="password" id="registro-password" name="registro-password" placeholder="********"required>
                 <div class="text-center">
-                    <button type="submit" class="boton-inicio-sesion">Iniciar sesion</button>
+                    <button type="submit" class="boton-registro-cuenta">Registrar cuenta</button>
                 </div>
             </form>
         </div>
-        <h3 class="registrarse"><a href="./sign-up.html">Si aún no tienes cuenta<br>Registrate Aqui</a></h3>
-        
     </main>
     <footer class="pie-pagina">
         <div class="info-pie-pagina">
@@ -54,6 +52,5 @@
             <h4><a href="#">Terminos y Condiciones</a></h4>
         </div>
     </footer>
-    
 </body>
 </html>

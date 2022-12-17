@@ -10,6 +10,17 @@ body {
     min-height: 100vh;
 }
 
+/* Clases para todas las pag */
+.fondo-madera{
+    background-image: url("./images/fondo.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.text-center{
+    text-align: center;
+}
+
 /* Nav Bar */
 header {
     background-color: #da9f20f3;
@@ -88,14 +99,14 @@ nav {
     text-decoration: none;
 }
 
+.pie-pagina h4{
+    margin: 2px;
+    align-items: center;
+}
+
 .info-pie-pagina {
     align-self: center;
 }
-
-.centrar {
-    margin: 2px;
-    align-items: center;
-} 
 
 .telefono-pie-pagina {
     display: flex;
@@ -135,7 +146,7 @@ main {
     margin: 0;
 }
 
-/* Pagina Servicios */
+/* Pagina Tienda */
 .servicios {
     margin-top: 10px;
     display: flex;
@@ -162,9 +173,6 @@ main {
 }
 
 .pagina-tienda{
-    background-image: url("./images/fondo.png");
-    background-repeat: no-repeat;
-    background-size: cover;
     width: 100%;
     height: auto;
     font-family: 'Radley', serif;
@@ -176,19 +184,17 @@ main {
     padding: 10px;
     text-align: center;
 }
-.servicio h3{
-    color:#d19719;
-    text-shadow: 1px 1px 2px #000000;
-}
+
 .servicio p{
     text-shadow: 1px 1px 2px #fff;
 }
 
-.servicios h1{
-    color: #da9f20f3;
+.servicio h3{
+    color:#d19719;
+    text-shadow: 1px 1px 2px #000000;
 }
 
-.contratar-servicio h2 {
+.servicios h1,h2{
     color: #da9f20f3;
 }
 
@@ -200,15 +206,18 @@ main {
     margin-right: 20%;
     margin-bottom: 20px;
 }
+
 .contratar-servicio h2{
     text-shadow: 1px 1px 2px #000;
     text-align: center;
 }
+
 .formu{
     color: #000;
     text-shadow: 1px 1px 2px #8B0000;
     text-align: center;
 }
+
 .elem-form {
     padding: 10px;
 }
@@ -217,21 +226,11 @@ main {
     font-family: 'Radley', serif;
 }
 
-div.center{
-    text-align: center;
-}
-
 /* Pagina Nosotros */
-.pagina-nosotros {
-    background-image: url("./images/fondo.png");
-    background-size: cover;
-}
-
 .main-nosotros {
     margin: 2% 0%;
     font-family: 'Radley', serif;
 }
-
 
 .aboutUs,.nosotros-comienzo,.nosotros-productos {
     display: flex;
@@ -240,7 +239,7 @@ div.center{
 }
 
 .nosotros-imagen-1 {
-    border-radius:100%;
+    border-radius:50px;
 }
 
 .nosotros-imagen-2 {
@@ -276,7 +275,6 @@ div.center{
     font-size: 20px;
 }
 
-
 /* Pagina Soporte */
 .pagina-soporte main {
     display: flex;
@@ -286,11 +284,6 @@ div.center{
 
 .form-soporte-fieldset {
     margin: auto 25%;
-}
-
-.pagina-soporte {
-    background-image: url("./images/fondo.png");
-    background-size: cover;
 }
 
 .pagina-soporte fieldset {
@@ -326,6 +319,13 @@ div.center{
     color:white;
 }
 
+.mensaje-input{
+    max-width: 100%;
+    max-height: 200px;
+    min-width: 100%;
+    min-height: 100px;
+}
+
 .pagina-soporte input, .pagina-soporte textarea {
     width: 100%;
 }
@@ -333,27 +333,26 @@ div.center{
     font-family: 'Radley', serif;
 }
 
-/* Pagina Login */
-.a-login {
-    background-image: url("./images/fondo.png");
-    background-size: cover;
-}
-
-.inicio-sesion, .registrar-cuenta {
+/* Pagina Login, Pagina Sign-up */
+.div-inicio-sesion, .div-registro-cuenta {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 3px solid #da9f20f3;
-    padding: 20px;
+    width:250px;
+    padding: 20px 0px;
+    margin: 5% auto 0px auto;
     border-radius: 20px;
+    border: 3px solid #da9f20f3;
     background-color: #9a7e6b;
     font-family: 'Radley', serif;
 }
-.inicio-sesion label, .registrar-cuenta label{
+
+.div-inicio-sesion label, .div-registro-cuenta label{
     color: #000;
     text-shadow: 1px 1px 2px #8B0000;
 }
-.inicio-sesion h2, .registrar-cuenta h2{
+
+.div-inicio-sesion h2, .div-registro-cuenta h2{
     color: #d19719;
     text-shadow: 1px 1px 2px #000;
 }
@@ -362,38 +361,36 @@ div.center{
     flex-direction: column;
 }
 
-.inicio-element {
-    margin-top: 10px;
-}
-
 .boton-inicio-sesion, .boton-registro-cuenta {
     margin-top: 10px;
     width: fit-content;
 }
 
-.div-boton-inicio-sesion, .div-boton-registro-cuenta{
-    text-align: center;
+.inicio-element {
+    margin-top: 10px;
 }
 
-.inicio-registro-cuenta {
-    display: flex;
-    flex-direction: row;
-    gap: 100px;
-    justify-content: center;
-    margin-top: 30px;
-}
-.mensaje-input{
-    max-width: 100%;
-    max-height: 200px;
-    min-width: 100%;
-    min-height: 100px;
-}
-
-.pagina-login{
-    background-image: url("./images/fondo.png");
-    background-size: cover;
-}
-
-.div-boton-inicio-sesion button, .div-boton-registro-cuenta button{
+.div-inicio-sesion button, .div-registro-cuenta button{
     font-family: 'Radley', serif;
 }
+
+/* Pagina Login */
+.registrarse {
+    display:block;
+    text-align:center;
+    margin-top:1%;
+}
+
+.registrarse a{
+    text-decoration:none;
+    color:#d19719;
+}
+
+.registrarse a:hover{
+    color:#835e10;
+}
+
+/* Pagina Sign-up */
+/* Nada especifico de esta pag por ahora */
+/* Idea: Se puede solicitar mucha mas informacion en este formulario
+   en compraracion con el de login*/
