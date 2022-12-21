@@ -23,28 +23,50 @@ body {
 
 /* Nav Bar */
 header {
-    background-color: #da9f20f3;
+    background-color: #da9f20;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: fit-content;
 }
 
-header ul li {
-    list-style: none;
-}
-
-header ul li a {
+header ul li a, header ul li {
     text-decoration: none;
     color: #600000;
     list-style: none;
 }
+
+/* Animacion */
+.nav-animation {
+    position: relative;
+}
+
+.nav-animation::before{
+    content:"";
+    position:absolute;
+    background-color:#600000;
+    bottom:0;
+    right: 0;
+    left: 0;
+    height:2px;
+    width: 0;
+    transition:width 0.25s ease-out;
+}
+
+.nav-animation:hover::before{
+    width:100%;
+}
+/* Fin Animacion */
 
 .logo {
     margin-left: 1%;
     display: flex;
     justify-content: flex-start;
     align-items: flex-end;
+}
+
+.logo img{
+    object-fit:cover;
 }
 
 nav {
@@ -62,14 +84,9 @@ nav {
     font-size: 125%;
 }
 
-.icon-log-in {
+.icon-log-in, .icon {
     width: 40px;
     height: auto;
-}
-
-.icon {
-    height: 50px;
-    width: auto;
 }
 
 .logo{
@@ -80,22 +97,19 @@ nav {
 .pie-pagina {
     background-color: #1F0C04;
     color:azure;
-    padding: 10px 20px;
+    padding: 15px;
     display: flex;
     justify-content: space-between;
     font-family: 'Radley', serif;
     margin: 0;
     margin-top: auto;
+    height: 80px;
 }
 
-.pie-pagina div a {
+.pie-pagina div a, .pie-pagina div a:visited {
     color: azure;
     margin: 6px;
     font-family: 'Radley', serif;
-    text-decoration: none;
-}
-.pie-pagina div a:visited{
-    color: azure;
     text-decoration: none;
 }
 
@@ -118,32 +132,25 @@ nav {
     background-color: #1F0C04;
 }
 
-.imagen-principal {
-    height: auto;
-    width: 100%;
-    opacity: 0.93;
-}
-
-.texto-portada {
-    color: rgb(206, 143, 25);
-    position: absolute;
-    top: 50%;
-    right: 5%;
-    text-align: end;
+.pagina-principal {
+    background-image: url("./images/fondo1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: top left;
 }
 
 .titulo-portada {
-    font-size: 125px;
+    color: rgb(206, 143, 25);
+    font-size: 120px;
     font-family: 'Raleway', sans-serif;
+    text-align: end;
+    margin-right: 2%;
 }
 
 .pi {
-    font-size:187px;
+    font-size:160px;
     font-family: sans-serif, sans-serif;
-}
-
-main {
-    margin: 0;
 }
 
 /* Codigo Animacion */
@@ -198,14 +205,18 @@ main {
     margin-right: 20%;
     margin-left: 20%;
 }
+.nuestros-productos h1{
+    margin-bottom: 9px;
+}
 
 .imagen-servicio {
-    height: auto;
+    height: 200px;
     width: 200px;
+    object-fit:cover;
     border-radius: 10px;
 }
 
-.container-servicios {
+/* .container-cervezas {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -213,6 +224,38 @@ main {
     align-content: center;
     margin-top: 20px;
     margin-bottom: 20px;
+} */
+.imagen1{
+    grid-area: imagen1;
+}
+.imagen2{
+    grid-area: imagen2;
+}
+.imagen3{
+    grid-area: imagen3;
+}
+.imagen4{
+    grid-area: imagen4;
+}
+.imagen5{
+    grid-area: imagen5;
+}
+.imagen6{
+    grid-area: imagen6;
+}
+.tabla-servicio{
+    grid-area: tabla-servicio;
+}
+
+.container-cervezas{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 3;
+    grid-template-areas: 
+    "imagen1 imagen2 imagen3"
+    "imagen4 imagen5 imagen6"
+    ". tabla-servicio ."
 }
 
 .pagina-tienda{
@@ -226,6 +269,7 @@ main {
     border-radius: 10px;
     padding: 10px;
     text-align: center;
+    width: 250px;
 }
 
 .servicio p{
@@ -237,8 +281,13 @@ main {
     text-shadow: 1px 1px 2px #000000;
 }
 
+.servicios h1{
+    font-size:3em;
+}
+
 .servicios h1,h2{
     color: #da9f20f3;
+    text-align:center;
 }
 
 .contratar-servicio {
@@ -250,19 +299,25 @@ main {
     margin-bottom: 20px;
 }
 
+.seleccionar-servicios input{
+    width:35px;
+}
+
 .contratar-servicio h2{
     text-shadow: 1px 1px 2px #000;
     text-align: center;
+    margin-bottom:10px;
 }
 
 .formu{
     color: #000;
     text-shadow: 1px 1px 2px #8B0000;
-    text-align: center;
 }
 
-.elem-form {
-    padding: 10px;
+.elem-form, .elem-form #nombre{
+    margin:5px;
+    padding:0px;
+    text-align: center;
 }
 
 .elem-form button{
@@ -277,20 +332,19 @@ main {
 
 .aboutUs,.nosotros-comienzo,.nosotros-productos {
     display: flex;
+    gap: 8px;
     margin: 3%;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
-.nosotros-imagen-1 {
-    border-radius:50px;
-}
-
-.nosotros-imagen-2 {
+.nosotros-imagen-1, .nosotros-imagen-2, .nosotros-comienzo {
     border-radius: 10px;
 }
-
-.nosotros-comienzo {
-    padding-right: 10px;
+.nosotros-imagen-1,.nosotros-imagen-2{
+    width: 280px;
+    object-fit:cover;
+    border-radius:20px;
 }
 
 .main-nosotros h1 {
@@ -363,10 +417,10 @@ main {
 }
 
 .mensaje-input{
-    max-width: 100%;
-    max-height: 200px;
     min-width: 100%;
+    max-width: 100%;
     min-height: 100px;
+    max-height: 200px;
 }
 
 .pagina-soporte input, .pagina-soporte textarea {
@@ -381,32 +435,39 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width:250px;
+    width:40%;
+    min-width:300px;
+    max-width: 400px;
     padding: 20px 0px;
     margin: 5% auto 0px auto;
     border-radius: 20px;
     border: 3px solid #da9f20f3;
-    background-color: #9a7e6b;
+    background-color: #1F0C04;
     font-family: 'Radley', serif;
 }
 
 .div-inicio-sesion label, .div-registro-cuenta label{
     color: #000;
-    text-shadow: 1px 1px 2px #8B0000;
+    /*text-shadow: 1px 1px 2px #8B0000;*/
 }
 
-.div-inicio-sesion h2, .div-registro-cuenta h2{
+.div-inicio-sesion h2, .div-registro-cuenta h2, .div-inicio-sesion label, .div-registro-cuenta label{
     color: #d19719;
-    text-shadow: 1px 1px 2px #000;
+    /*text-shadow: 1px 1px 2px #000;*/
 }
+
 .form-inicio-sesion,.form-registro-cuenta {
     display: flex;
     flex-direction: column;
+    width:90%;
 }
 
 .boton-inicio-sesion, .boton-registro-cuenta {
     margin-top: 10px;
-    width: fit-content;
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    font-size: 16px;
 }
 
 .inicio-element {
@@ -418,22 +479,65 @@ main {
 }
 
 /* Pagina Login */
-.registrarse {
+
+.registrarse, .logearse {
     display:block;
     text-align:center;
     margin-top:1%;
 }
 
-.registrarse a{
+.registrarse a, .logearse a{
     text-decoration:none;
     color:#d19719;
 }
 
-.registrarse a:hover{
+.registrarse a:hover, .logearse a:hover{
     color:#835e10;
 }
 
-/* Pagina Sign-up */
-/* Nada especifico de esta pag por ahora */
-/* Idea: Se puede solicitar mucha mas informacion en este formulario
-   en compraracion con el de login*/
+.form-registro-cuenta label, .form-inicio-sesion label {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.form-registro-cuenta input, .form-inicio-sesion input {
+    height: 25px;
+    border-radius: 7px;
+}
+
+/* Responsive Mobile */
+@media (max-width: 800px){
+    /* Tienda */
+    .container-cervezas{
+        display:flex;
+        flex-flow: row wrap;
+        padding:0px;
+        justify-content: center;
+        margin-bottom: 12px;
+    }
+    .servicios{
+        margin: auto;
+    }
+    .titulo-portada, .pi {
+        font-size: 100px;
+    }
+}
+
+
+@media (max-width: 550px) {
+    /* Nav Bar */
+    .icon {
+        width: 0;
+        height: 0;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    .nav-bar {
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+    }
+}

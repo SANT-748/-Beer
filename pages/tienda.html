@@ -17,50 +17,52 @@
         </div>
         <nav>
             <ul class="nav-bar">
-                <li class="nav-element element-inicio"><a href="../index.html">Inicio</a></li>
-                <li class="nav-element"><a href="tienda.html">Tienda</a></li>
-                <li class="nav-element"><a href="nosotros.html">Nosotros</a></li>
-                <li class="nav-element"><a href="soporte.html">Soporte</a></li>
+                <li class="nav-element element-inicio"><a href="../index.html" class="nav-animation">Inicio</a></li>
+                <li class="nav-element"><a href="tienda.html" class="nav-animation">Tienda</a></li>
+                <li class="nav-element"><a href="nosotros.html" class="nav-animation">Nosotros</a></li>
+                <li class="nav-element"><a href="soporte.html" class="nav-animation">Soporte</a></li>
                 <li class="nav-element"><a href="login.html"><img src="../images/icon-log-in.png" alt="log-in" class="icon-log-in"></a></li>
             </ul>
         </nav>
     </header>
     <main>
         <div class="servicios">
-            <h1>Nuestros productos</h1>
-            <div class="container-servicios">
+            <div class="nuestros-productos">
+                <h1>Nuestros productos</h1>
+            </div>
+            <div class="container-cervezas">
                 <div class="servicio">
-                    <img src="../images/dorada.jpg" alt="" class="imagen-servicio">
+                    <img src="../images/dorada.jpg" alt="" class="imagen-servicio imagen1">
                     <h3>Rubia</h3>
                     <p>Dorada y equlibrada</p>
                 </div>
                 <div class="servicio">
-                    <img src="../images/roja.jpg" alt="" class="imagen-servicio">
+                    <img src="../images/roja.jpg" alt="" class="imagen-servicio imagen2">
                     <h3>Roja</h3>
                     <p>Roja y acaramelada</p>
                 </div>
                 <div class="servicio">
-                    <img src="../images/stoutt.png" alt="" class="imagen-servicio">
+                    <img src="../images/stoutt.png" alt="" class="imagen-servicio imagen3">
                     <h3>Negra</h3>
                     <p>Dulce y de espuma cremosa</p>
                 </div>
                 <div class="servicio">
-                    <img src="../images/ipa.jpg" alt="" class="imagen-servicio">
+                    <img src="../images/ipa.jpg" alt="" class="imagen-servicio imagen4">
                     <h3>IPA</h3>
                     <p>Con aroma a frutas cítricas</p>
                 </div>
                 <div class="servicio">
-                    <img src="../images/apa.jpg" alt="" class="imagen-servicio">
+                    <img src="../images/apa.jpg" alt="" class="imagen-servicio imagen5">
                     <h3>APA</h3>
                     <p>Espuma blanquecina, de buena retención</p>
                 </div>
                 <div class="servicio">
-                    <img src="../images/lager.jpg" alt="" class="imagen-servicio">
+                    <img src="../images/lager.jpg" alt="" class="imagen-servicio imagen6">
                     <h3>Lager</h3>
                     <p>Espuma blanca de buena retención</p>
                 </div>
             </div>
-            <div class="contratar-servicio">
+            <div class="contratar-servicio tabla-servicio">
                 <h2>¡Contrata nuestro servicio!</h2>
                 <fieldset>
                     <form class="formu" action="compra">
@@ -68,23 +70,24 @@
                             <label for="nombre">Nombre y Apellido / Nombre empresa: </label>
                             <br>
                             <input type="text" id="nombre" name="nombre" required>
-                            <br>
                         </div>
                         
                         <div class="seleccionar-servicios elem-form">
                             <p>Cervezas (seleccione 1 o más): </p>
-                            <input type="checkbox" id="rubia" name="rubiacheck" value="1">
-                            <label for="rubia">Rubia</label><br>
-                            <input type="checkbox" id="roja" name="rojacheck" value="2">
-                            <label for="roja">Roja</label><br>
-                            <input type="checkbox" id="negra" name="negracheck" value="3">
-                            <label for="negra">Negra</label><br>
-                            <input type="checkbox" id="ipa" name="ipacheck" value="4">
-                            <label for="ipa">IPA</label><br>
-                            <input type="checkbox" id="apa" name="apacheck" value="5">
-                            <label for="apa">APA</label><br>
-                            <input type="checkbox" id="lager" name="lagercheck" value="5">
-                            <label for="lager">Lager</label><br>
+                            <div class="seleccionar-servicios-label">
+                                <label for="rubia">Rubia</label>
+                                <input type="number" id="rubia" name="rubiacheck" value="0" min="0" max="99"><br>
+                                <label for="roja">Roja</label>
+                                <input type="number" id="roja" name="rojacheck" value="0" min="0" max="99"><br>
+                                <label for="negra">Negra</label>
+                                <input type="number" id="negra" name="negracheck" value="0" min="0" max="99"><br>
+                                <label for="ipa">IPA</label>
+                                <input type="number" id="ipa" name="ipacheck" value="0" min="0" max="99"><br>
+                                <label for="apa">APA</label>
+                                <input type="number" id="apa" name="apacheck" value="0" min="0" max="99"><br>
+                                <label for="lager">Lager</label>
+                                <input type="number" id="lager" name="lagercheck" value="0" min="0" max="99"><br>
+                            </div>
                         </div>
                         
                         <div class="telefono elem-form">
