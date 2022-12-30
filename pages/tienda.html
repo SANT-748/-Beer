@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Radley&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/2326d14a17.js" crossorigin="anonymous"></script>
 </head>
 <body class="pagina-tienda fondo-madera">
     
@@ -16,6 +17,10 @@
             <a href="../index.html"><img src="../images/icon.png" alt="icon" class="icon"></a>
         </div>
         <nav>
+            <input type="checkbox" id="check-desplegar-lista">
+            <label for="check-desplegar-lista" class="desplegar-lista">
+                <i class="fa-sharp fa-solid fa-bars"></i>
+            </label>
             <ul class="nav-bar">
                 <li class="nav-element element-inicio"><a href="../index.html" class="nav-animation">Inicio</a></li>
                 <li class="nav-element"><a href="tienda.html" class="nav-animation">Tienda</a></li>
@@ -63,18 +68,14 @@
                 </div>
             </div>
             <div class="contratar-servicio tabla-servicio">
-                <h2>¡Contrata nuestro servicio!</h2>
-                <fieldset>
-                    <form class="formu" action="compra">
+                <h2>¡Encarga nuestras Cervezas!</h2>
+                    <form class="formu form-tienda" action="compra">
                         <div class="nombre elem-form">
-                            <label for="nombre">Nombre y Apellido / Nombre empresa: </label>
-                            <br>
-                            <input type="text" id="nombre" name="nombre" required>
+                            <input type="text" id="nombre" name="nombre" class="mayus"required>
+                            <label for="nombre" class="label-element">Nombre y Apellido</label>                           
                         </div>
                         
-                        <div class="seleccionar-servicios elem-form">
-                            <p>Cervezas (seleccione 1 o más): </p>
-                            <div class="seleccionar-servicios-label">
+                        <div class="seleccionar-servicios seleccion-cervezas">
                                 <label for="rubia">Rubia</label>
                                 <input type="number" id="rubia" name="rubiacheck" value="0" min="0" max="99"><br>
                                 <label for="roja">Roja</label>
@@ -87,24 +88,20 @@
                                 <input type="number" id="apa" name="apacheck" value="0" min="0" max="99"><br>
                                 <label for="lager">Lager</label>
                                 <input type="number" id="lager" name="lagercheck" value="0" min="0" max="99"><br>
-                            </div>
                         </div>
                         
                         <div class="telefono elem-form">
-                            <label for="telefono">Tel: </label>
-                            <br>
-                            <input type="tel" id="telefono" name="telefono" required>
-                            <br>
+                            <input type="tel" id="telefono" name="telefono" maxlength="12"required>
+                            <label for="telefono">Telefono </label>
                         </div>
                         
                         <div class="boton elem-form">
                             <div class="text-center">
-                                <button type="submit">Enviar</button>
+                                <button type="submit" class="boton-submit-tienda">Enviar</button>
                             </div>
                             
                         </div>
                     </form>
-                </fieldset>
             </div>
         </div>
         
