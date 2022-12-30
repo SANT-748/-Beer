@@ -10,9 +10,10 @@ body {
     min-height: 100vh;
 }
 
+
 /* Clases para todas las pag */
 .fondo-madera{
-    background-image: url("./images/fondo.png");
+    background-image: url("./images/fondo.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -79,7 +80,7 @@ nav {
     justify-content: flex-end;
     align-items:center;
     gap: 10%;
-    margin-right: 10%;
+    margin-right: 4%;
     font-family: 'Raleway', sans-serif;
     font-size: 125%;
 }
@@ -93,17 +94,30 @@ nav {
     margin: 0.5%;
 }
 
+/* Barra media */
+.desplegar-lista{
+    display: none;
+    font-size: 20px;
+    color: #600000;
+    float: left;
+    line-height: 45px;
+    margin-left: 10px;
+}
+#check-desplegar-lista{
+    display: none;
+}
+
 /* Footer */
 .pie-pagina {
+    padding: 5px;
+    margin: 0px;
+    font-size:12px;
     background-color: #1F0C04;
     color:azure;
-    padding: 15px;
     display: flex;
     justify-content: space-between;
     font-family: 'Radley', serif;
-    margin: 0;
     margin-top: auto;
-    height: 80px;
 }
 
 .pie-pagina div a, .pie-pagina div a:visited {
@@ -115,41 +129,52 @@ nav {
 
 .pie-pagina h4{
     margin: 2px;
+    font-size:12px;
     align-items: center;
 }
 
 .info-pie-pagina {
     align-self: center;
+    font-size:12px;
+    margin-left:15px;
 }
 
 .telefono-pie-pagina {
     display: flex;
     justify-content: center;
+    margin:3px;
+}
+
+.telefono-pie-pagina img{
+    width:15px;
+    height:15px;
 }
 
 /* Pagina Index */
-.pagina-principal {
-    background-color: #1F0C04;
-}
 
 .pagina-principal {
+    background-color: #1F0C04;
     background-image: url("./images/fondo1.jpg");
+    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-position: top left;
 }
+
 
 .titulo-portada {
     color: rgb(206, 143, 25);
-    font-size: 120px;
+    font-size: 7.5em;
     font-family: 'Raleway', sans-serif;
     text-align: end;
     margin-right: 2%;
+    vertical-align: top;
+    padding-top: 0;
+    height: fit-content;
 }
 
 .pi {
-    font-size:160px;
+    font-size: 1.48em;
     font-family: sans-serif, sans-serif;
 }
 
@@ -216,15 +241,6 @@ nav {
     border-radius: 10px;
 }
 
-/* .container-cervezas {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    align-content: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
-} */
 .imagen1{
     grid-area: imagen1;
 }
@@ -265,17 +281,58 @@ nav {
 }
 
 .servicio{
-    background-color: #9a7e6b;
+    background-color: #69432a;
     border-radius: 10px;
     padding: 10px;
     text-align: center;
     width: 250px;
 }
-
+.servicio:hover {
+    box-shadow: 2px 1px 3px slategrey;
+}
 .servicio p{
-    text-shadow: 1px 1px 2px #fff;
+    color: #c7c7c7;
+    text-shadow: 1px 1px 2px #000;
 }
 
+.servicio:hover img {
+	-webkit-animation: puff-in-center 0.7s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+	        animation: puff-in-center 0.7s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+}
+
+ @-webkit-keyframes puff-in-center {
+    0% {
+      -webkit-transform: scale(2);
+              transform: scale(2);
+      -webkit-filter: blur(4px);
+              filter: blur(4px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
+    }
+  }
+  @keyframes puff-in-center {
+    0% {
+      -webkit-transform: scale(2);
+              transform: scale(2);
+      -webkit-filter: blur(4px);
+              filter: blur(4px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
+    }
+  }
+  
 .servicio h3{
     color:#d19719;
     text-shadow: 1px 1px 2px #000000;
@@ -291,7 +348,7 @@ nav {
 }
 
 .contratar-servicio {
-    background-color: #9a7e6b;
+    background-color: #69432a;
     border-radius: 10px;
     padding: 10px;
     margin-left: 20%;
@@ -299,9 +356,6 @@ nav {
     margin-bottom: 20px;
 }
 
-.seleccionar-servicios input{
-    width:35px;
-}
 
 .contratar-servicio h2{
     text-shadow: 1px 1px 2px #000;
@@ -309,19 +363,80 @@ nav {
     margin-bottom:10px;
 }
 
-.formu{
-    color: #000;
-    text-shadow: 1px 1px 2px #8B0000;
-}
-
-.elem-form, .elem-form #nombre{
-    margin:5px;
-    padding:0px;
-    text-align: center;
-}
-
 .elem-form button{
     font-family: 'Radley', serif;
+}
+
+.seleccion-cervezas{
+    margin: auto;
+}
+.form-tienda .seleccion-cervezas label{
+    color:rgb(206, 143, 25);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
+}
+.form-tienda .seleccion-cervezas input{
+    border: 1px solid #DA9F20;
+}
+
+
+
+/* Intento de cambiar formulario */
+.form-tienda .elem-form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-tienda {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    gap: 15px;
+    padding-top: 10px;
+}
+
+.form-tienda .elem-form {
+    position: relative;
+    width: 250px;
+    align-self: center;
+}
+
+.form-tienda .elem-form input{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, .25);
+    background: rgba(255, 255, 255, 0.50);
+    border-radius: 5px;
+    outline: none;
+    color: #FFEDCB;
+    font-size: 1em;
+}
+.form-tienda .elem-form .mayus{
+    text-transform: capitalize;
+}
+
+.form-tienda .elem-form label{
+    position: absolute;
+    left: 0;
+    padding: 10px;
+    pointer-events: none;
+    font-size: 1em;
+    color: rgb(255, 255, 255);
+    transition: 0.5s;
+}
+
+.form-tienda .elem-form input:valid ~ label, .form-tienda .elem-form input:focus ~ label{
+    color: #fff;
+    transform: translateX(10px) translateY(-20px);
+    font-size: .85em;
+    padding: 0 10px;
+    background: #DA9F20;
+    border-radius: 3px;
+}
+
+.form-tienda .elem-form input:valid, .form-tienda .elem-form input:focus{
+    border: 1px solid #DA9F20;
 }
 
 /* Pagina Nosotros */
@@ -373,29 +488,29 @@ nav {
 }
 
 /* Pagina Soporte */
+
+.form-soporte h2 {
+    padding-bottom: 15px;
+}
+
 .pagina-soporte main {
     display: flex;
     justify-content: center;
     font-family: 'Radley', serif;
 }
 
-.form-soporte-fieldset {
-    margin: auto 25%;
-}
 
 .pagina-soporte fieldset {
     margin-top:2%;
     width: fit-content;
     padding: 20px;
+    border-color: #da9f20;
+    margin: 3% 25% auto 25%;
 }
 
 .pagina-soporte legend{
     font-size:20px;
-    color:white;
-}
-
-.pagina-soporte label {
-    width: 400px;
+    color:#da9f20;
 }
 
 .form-soporte {
@@ -408,30 +523,32 @@ nav {
     display: flex;
     justify-content: center;
     margin:5px 0px;
-    width: fit-content;
 }
 
 .titulo-input {
     font-size:15px;
-    color:white;
+    color:#da9f20;
 }
 
 .mensaje-input{
     min-width: 100%;
     max-width: 100%;
     min-height: 100px;
-    max-height: 200px;
+    max-height: 100px;
 }
 
 .pagina-soporte input, .pagina-soporte textarea {
     width: 100%;
+    background-color: rgba(255, 255, 255, 0.50);
+    color: #FFEDCB;
 }
+
 .div-enviar button{
     font-family: 'Radley', serif;
 }
 
 /* Pagina Login, Pagina Sign-up */
-.div-inicio-sesion, .div-registro-cuenta {
+.div-inicio-sesion, .div-registro-cuenta, .div-soporte {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -440,45 +557,116 @@ nav {
     max-width: 400px;
     padding: 20px 0px;
     margin: 5% auto 0px auto;
-    border-radius: 20px;
-    border: 3px solid #da9f20f3;
-    background-color: #1F0C04;
+    border-radius: 10px;
+    border: 2px solid #da9f20;
     font-family: 'Radley', serif;
 }
-
-.div-inicio-sesion label, .div-registro-cuenta label{
-    color: #000;
-    /*text-shadow: 1px 1px 2px #8B0000;*/
+.div-inicio-sesion, .div-registro-cuenta{
+    background: none;
 }
 
-.div-inicio-sesion h2, .div-registro-cuenta h2, .div-inicio-sesion label, .div-registro-cuenta label{
-    color: #d19719;
-    /*text-shadow: 1px 1px 2px #000;*/
+.div-inicio-sesion h2, .div-registro-cuenta h2, .div-inicio-sesion label, .div-registro-cuenta label, .div-form label span{
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 1);
 }
 
-.form-inicio-sesion,.form-registro-cuenta {
-    display: flex;
-    flex-direction: column;
-    width:90%;
-}
-
-.boton-inicio-sesion, .boton-registro-cuenta {
+.boton-inicio-sesion, .boton-registro-cuenta, .boton-enviar-soporte, .boton-submit-tienda {
     margin-top: 10px;
-    width: 100px;
-    height: 30px;
+    width: fit-content;
+    height: fit-content;
     border-radius: 5px;
     font-size: 16px;
+    padding: 10px;
+    border-style: none;
+    margin: auto 0;
+    background: rgba(255, 255, 255, 0.50);
+    color: #fff;
+    cursor: pointer;
 }
 
-.inicio-element {
-    margin-top: 10px;
+.boton-inicio-sesion:hover, .boton-registro-cuenta:hover, .boton-enviar-soporte:hover {
+    box-shadow: 5px 2px 1px #000;
 }
 
-.div-inicio-sesion button, .div-registro-cuenta button{
+.div-inicio-sesion button, .div-registro-cuenta button, .div-soporte{
     font-family: 'Radley', serif;
 }
 
 /* Pagina Login */
+
+.inicio-cuenta, .registro-cuenta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.div-inicio-sesion, .div-registro-cuenta, .div-soporte{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-inicio-sesion, .form-registrar-cuenta {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    gap: 23px;
+    padding-top: 12px;
+}
+
+.div-form {
+    position: relative;
+    width: 250px;
+    align-self: center;
+}
+
+.div-form input{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, .25);
+    background: rgba(255, 255, 255, 0.50);
+    border-radius: 5px;
+    outline: none;
+    color: #FFEDCB;
+    font-size: 1em;
+}
+.div-form .mayus{
+    text-transform: capitalize;
+}
+
+.div-form label{
+    position: absolute;
+    left: 0;
+    padding: 10px;
+    pointer-events: none;
+    font-size: 1em;
+    color: rgb(255, 255, 255);
+    transition: 0.5s;
+}
+
+.div-form input:valid ~ label, .div-form input:focus ~ label,
+.div-form textarea:valid ~ label, .div-form textarea:focus ~ label,
+.div-form .mail:invalid ~ label, .div-form input:focus ~ label{
+    color: #fff;
+    transform: translateX(10px) translateY(-7px);
+    font-size: .85em;
+    padding: 0 10px;
+    background: #DA9F20;
+    border-radius: 3px;
+}
+
+.div-form input:valid, .div-form input:focus,
+.div-form textarea:valid, .div-form textarea:focus{
+    border: 1px solid #DA9F20;
+}
+
+.div-form textarea:valid, .div-form textarea:focus {
+    outline: 0;
+}
+
+.registrarse {
+    margin-top: 20px;
+}
 
 .registrarse, .logearse {
     display:block;
@@ -493,20 +681,65 @@ nav {
 
 .registrarse a:hover, .logearse a:hover{
     color:#835e10;
-}
+} 
 
-.form-registro-cuenta label, .form-inicio-sesion label {
-    font-size: 20px;
-    font-weight: bold;
-}
 
-.form-registro-cuenta input, .form-inicio-sesion input {
-    height: 25px;
-    border-radius: 7px;
-}
+@media screen and (max-width: 425px){
+    .pagina-principal{
+        background-image:url(./images/fondo320px.jpg);
+        background-position:center;
+    }
+    
+    /*Navbar*/
+    nav{
+        width: 100%;
+    }
+    header{
+        display: flex;
+    }
 
-/* Responsive Mobile */
-@media (max-width: 800px){
+    .desplegar-lista{
+        display: block;
+    }
+
+    .nav-bar{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #DA9F20;
+        top: 45px;
+        left: -100%;
+        text-align: center;
+        transition: all .6s;
+        gap: 6%;
+    }
+
+    nav ul li a{
+        display: block;
+        line-height: 40px;
+    }
+
+    #check-desplegar-lista:checked ~ ul {
+        left: 0;
+        z-index: 3;
+    }
+
+    #check-desplegar-lista:not(:checked) ~ ul{
+        z-index: 3;
+    }
+
+    .icon{
+        display: none;
+    }
+
+    
+    /* Index */
+    .titulo-portada{
+        font-size:50px;
+    }
     /* Tienda */
     .container-cervezas{
         display:flex;
@@ -518,26 +751,58 @@ nav {
     .servicios{
         margin: auto;
     }
-    .titulo-portada, .pi {
-        font-size: 100px;
+    .nuestros-productos h1{
+        font-size: 40px;
+    }
+    .main-nosotros h1{
+        font-size: 50px;
+    }
+
+    .nosotros-comienzo-texto,.nosotros-productos-texto {
+        width: 100%;
+        font-size: 10px;
     }
 }
 
-
-@media (max-width: 550px) {
-    /* Nav Bar */
-    .icon {
-        width: 0;
-        height: 0;
+@media screen and (min-width: 426px) and (max-width: 768px){
+    .pagina-principal {
+        background-image: url(./images/fondo768px.jpg);
+        background-position: right;
+        background-size: none;
     }
 
+    /* Nav Bar */
     nav {
         width: 100%;
     }
 
     .nav-bar {
-        flex-wrap: wrap;
-        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        gap: 4%;
+        margin-right: 2%;
+        font-family: 'Raleway', sans-serif;
+    }
+
+    nav ul li a{
+        font-size: 16px;
+    }
+    nav ul li a .icon-log-in{
+        scale: 0.8;
+    }
+    
+    /* Tienda */
+    .container-cervezas{
+        display:flex;
+        flex-flow: row wrap;
+        padding:0px;
         justify-content: center;
+        margin-bottom: 12px;
+    }
+    .servicios{
+        margin: auto;
+    }
+    .titulo-portada{
+        font-size: 100px;
     }
 }
