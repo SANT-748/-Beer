@@ -8,13 +8,21 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Radley&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/2326d14a17.js" crossorigin="anonymous"></script>
 </head>
 <body class="pagina-principal">
-    <header>
+    
+    <header class="header-nav-bar">
         <div class="logo">
             <a href="index.html"><img src="./images/icon.png" alt="icon" class="icon"></a>
         </div>
         <nav>
+            <input type="checkbox" id="check-desplegar-lista">
+            <label for="check-desplegar-lista" class="desplegar-lista">
+                <i class="fa-sharp fa-solid fa-bars"></i>
+            </label>
+            
             <ul class="nav-bar">
                 <li class="nav-element element-inicio"><a href="./index.html" class="nav-animation">Inicio</a></li>
                 <li class="nav-element"><a href="./pages/tienda.html" class="nav-animation">Tienda</a></li>
@@ -26,15 +34,7 @@
     </header>
 
     <main class="main-index">
-        <!--
-        <div class="portada">
-            <img src="./images/fondo1.jpg" alt="main" class="imagen-principal">
-            <div class="texto-portada">
-                <h1 class="titulo-portada tracking-in-expand "><span class="pi">𝜋</span>Beer</h1>
-            </div>
-        </div>
-        -->
-        <h1 class="titulo-portada tracking-in-expand "><span class="pi">𝜋</span>Beer</h1>
+        <h1 class="titulo-portada tracking-in-expand"><span class="pi">𝜋</span>Beer</h1>
     </main>
 
     <footer class="pie-pagina">
